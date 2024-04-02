@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="neuralgo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 style="text-align: center;color:rgb(101, 103, 102);font-size:2rem;"><i class="fas fa-globe"></i> Your Company</h1>
+    <div class="title"><h1 style="margin:0 10% 0 10%;padding:20px 10px">Job Application</h1></div>
+    
+    <div class="container">
+        <form action="success.html" onsubmit="return validateform()" id="form">
+            <div class="input-grp left">
+                <label for="FirstName"><b>First Name</b><span class="asteric">*</span></label><br>
+                <input type="text" id="fname" name="firstname" placeholder="First Name" class="input-box"  >
+                <span id="ferr"  class="err"></span>
+                <br><br>
+                
+                <label for="Email"><b>Email</b><span class="asteric">*</span></label><br>
+                <input type="email" id="email" name="email" placeholder="Email" class="input-box">
+                <span id="eerr" class="err"></span>
+                <br><br>
+                <label for="Address"><b>Address</b><span class="asteric">*</span></label><br>
+                <input type="text" id="address" name="address" placeholder="Address" class="input-box full-width">
+                <span id="aerr" class="err"></span>
+                <br><br>
+            </div>
+            <div class="input-grp right">
+                <label for="LastName"><b>Last Name</b><span class="asteric">*</span></label><br>
+                <input type="text" id="lname" name="lastname" placeholder="Last Name" class="input-box">
+                <span id="lerr" class="err"></span>
+                <br><br>
+                <label for="Phone"><b>Phone</b><span class="asteric">*</span></label><br>
+                <input type="number" id="phone" name="phone" placeholder="Phone" class="input-box">
+                <span id="perr" class="err"></span>
+                <br><br>
+                <label for="Resume"><b>Resume</b><span class="asteric">*</span></label><br>
+                <input type="file" id="myFile" accept=".docx,.pdf" class="file-upload" multiple onchange="validateFileSize()"><br>
+                <span id="res" class="err"></span>
+        
+        </div>
+        
+        
+            
+            
+            <div><button type="submit" class="btn" id="submitButton" ><b>Submit</b></button></div>  
+          
+        </form>
+    </div>
+
+    <script src="neuralgo.js"></script>
+</body>
+</html>
